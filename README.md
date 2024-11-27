@@ -72,4 +72,7 @@ plot.show()
 ```
 
 This example produces the following result:
-![/tests/result.png](https://github.com/DanielCortild/IntroductionToOptimization/blob/main/tests/result.png)
+
+![Resulting Image](https://github.com/DanielCortild/IntroductionToOptimization/blob/main/tests/result.png?raw=true)
+
+Your task will be do deblur the blurred image, and plot the result as above.
