@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "RuG_IntroToOptimization"
+version = "0.0.1"
+authors = [
+  { name="Daniel Cortild", email="d.cortild@rug.nl" },
+]
+description = "A small package to help students implement the computational exercises in the RuG course 'Introduction to Optimization'."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    'numpy',
+    'scipy',
+    'Pillow',
+    'matplotlib'
+]
+
+[project.urls]
+Homepage = "https://github.com/DanielCortild/IntroductionToOptimization"
+Issues = "https://github.com/DanielCortild/IntroductionToOptimization/issues"
+
+[options]
+install_requires = [
+    'numpy',
+    'scipy',
+    'Pillow',
+    'matplotlib'
+]
+setup_requires = [
+    'numpy',
+    'scipy',
+    'Pillow',
+    'matplotlib'
+]
