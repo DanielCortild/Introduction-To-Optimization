@@ -1,2 +1,3 @@
 from .blurring_operator import R
-from .load_image import load_image, ImagePlotter
+from .ImageTools import load_image, ImagePlotter
+from .discrete_gradient import grad, grad_T
