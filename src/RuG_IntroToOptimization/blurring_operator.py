@@ -28,3 +28,5 @@ def R(X):
     e1[0][0] = 1
     S = np.divide( dct2(dctshift(Pbig, (4,4))), dct2(e1) )
     return idct2( np.multiply(S, dct2(X)))
+
+R_T = R
