@@ -100,7 +100,7 @@ from RuG_IntroToOptimization import R, R_T, load_image, ImagePlotter, grad, grad
 # Load an image
 X_ref = load_image('cat.jpg')
 
-# Create an image plotter for a 1x2 grid
+# Create an image plotter for a 2x3 grid
 plot = ImagePlotter(2, 3)
 
 # Display the original and transformed images
