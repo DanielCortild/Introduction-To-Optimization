@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "RuG_IntroToOptimization"
-version = "0.0.8"
+version = "0.0.9"
 authors = [
   { name="Daniel Cortild", email="d.cortild@rug.nl" },
 ]
