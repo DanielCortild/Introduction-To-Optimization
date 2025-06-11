@@ -40,8 +40,7 @@ _Returns_:
 
 Applies a blurring effect or other specified transformation to the input image.
 
-**Note:** `R` is a linear operator, yet the matrix form of it is not accessible. See [here](#Linear-Operators) for more
-details.
+**Note:** `R` is a linear operator, yet the matrix form of it is not accessible. See below for more details.
 
 _Parameters_:
 
@@ -55,8 +54,7 @@ _Returns_:
 
 Applies the adjoint of the blurring operator to the input image.
 
-**Note:** `R_T` is a linear operator, yet the matrix form of it is not accessible. See [here](#Linear-Operators) for more
-details.
+**Note:** `R_T` is a linear operator, yet the matrix form of it is not accessible. See below for more details.
 
 _Parameters_:
 
@@ -70,8 +68,7 @@ _Return_:
 
 Computes the discrete gradient of the input image in the x and y directions.
 
-**Note:** `grad` is a linear operator, yet the matrix form of it is not accessible. See [here](#Linear-Operators) for more
-details.
+**Note:** `grad` is a linear operator, yet the matrix form of it is not accessible. See below for more details.
 
 _Parameters_:
 
@@ -85,8 +82,7 @@ _Returns_:
 
 Adjoint of the discrete gradient operator.
 
-**Note:** `grad_T` is a linear operator, yet the matrix form of it is not accessible. See [here](#Linear-Operators) for more
-details.
+**Note:** `grad_T` is a linear operator, yet the matrix form of it is not accessible. See below for more details.
 
 _Parameters_:
 
