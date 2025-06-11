@@ -137,7 +137,7 @@ plot.show()
 
 This example produces the following result:
 
-![Resulting Image](https://github.com/DanielCortild/IntroductionToOptimization/blob/main/tests/result.png?raw=true)
+![Resulting Image](https://github.com/DanielCortild/Introduction-To-Optimization/blob/main/tests/result.png?raw=true)
 
 Your task will be to deblur the blurred image, and plot the result as above. Obviously, the last three plots are not
 representative of the original image, but the functions `grad` and `grad_T` will be useful for the implementation.
