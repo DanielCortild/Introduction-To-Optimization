@@ -1,6 +1,7 @@
 # RuG_IntroToOptimization Package
 
-This repository provides tools for image manipulation and visualization, intended for educational purposes in the field of optimization and computational image processing.
+This repository provides tools for image manipulation and visualization, intended for educational purposes in the field
+of optimization and computational image processing.
 
 # Installation
 
@@ -26,6 +27,7 @@ The following functions and classes are provided through the module:
 ### `load_image(filename: str) -> np.ndarray`
 
 Loads an image, resizes it, converts it to grayscale, and returns the processed image as a NumPy array.
+
 _Parameters_:
 
 - `filename` (**str**): The path to the image file.
@@ -37,6 +39,10 @@ _Returns_:
 ### `R(image: np.ndarray) -> np.ndarray`
 
 Applies a blurring effect or other specified transformation to the input image.
+
+**Note:** `R` is a linear operator, yet the matrix form of it is not accessible. See [here](#Linear-Operators) for more
+details.
+
 _Parameters_:
 
 - `image` (**np.ndarray**): Input image as a NumPy array.
@@ -48,6 +54,9 @@ _Returns_:
 ### `R_T(image: np.ndarray) -> np.ndarray`
 
 Applies the adjoint of the blurring operator to the input image.
+
+**Note:** `R_T` is a linear operator, yet the matrix form of it is not accessible. See [here](#Linear-Operators) for more
+details.
 
 _Parameters_:
 
@@ -61,6 +70,9 @@ _Return_:
 
 Computes the discrete gradient of the input image in the x and y directions.
 
+**Note:** `grad` is a linear operator, yet the matrix form of it is not accessible. See [here](#Linear-Operators) for more
+details.
+
 _Parameters_:
 
 - `image` (**np.ndarray**): Input image as a NumPy array.
@@ -72,6 +84,9 @@ _Returns_:
 ### `grad_T(grad: Tuple[np.ndarray]) -> np.ndarray`
 
 Adjoint of the discrete gradient operator.
+
+**Note:** `grad_T` is a linear operator, yet the matrix form of it is not accessible. See [here](#Linear-Operators) for more
+details.
 
 _Parameters_:
 
@@ -85,14 +100,21 @@ _Returns_:
 
 A class for creating a grid of images for display. It contains multiples methods.
 
+_Parameters_:
+
+- `rows` (**int**): Number of rows in the grid.
+- `cols` (**int**): Number of columns in the grid.
+
 _Methods_:
 
-- `plot_image(image: np.ndarray, title: str, row: int, col: int)`: Adds an image to the specified grid cell (`row` and `col` are 0-indexed) with a title.
+- `plot_image(image: np.ndarray, title: str, row: int, col: int)`: Adds an image to the specified grid cell (`row` and
+  `col` are 0-indexed) with a title.
 - `show()`: Displays the plotted grid.
 
 ## Example Script
 
-To run this example script, you must have a file called `'cat.jpg'` in your file system, at the same location as the script. You may change the filename and path, but the image must remain a `.jpg` file.
+To run this example script, you must have a file called `'cat.jpg'` in your file system, at the same location as the
+script. You may change the filename and path, but the image must remain a `.jpg` file.
 
 ```python
 from RuG_IntroToOptimization import R, R_T, load_image, ImagePlotter, grad, grad_T
@@ -117,4 +139,14 @@ This example produces the following result:
 
 ![Resulting Image](https://github.com/DanielCortild/IntroductionToOptimization/blob/main/tests/result.png?raw=true)
 
-Your task will be do deblur the blurred image, and plot the result as above. Obviously, the last three plots are not representative of the original image, but the functions `grad` and `grad_T` will be useful for the implementation.
+Your task will be to deblur the blurred image, and plot the result as above. Obviously, the last three plots are not
+representative of the original image, but the functions `grad` and `grad_T` will be useful for the implementation.
+
+## Linear Operators
+
+The functions `R`, `R_T`, `grad` and `grad_T` are linear operators, but their matrix forms are not accessible. This
+means that while they can be applied to images, the underlying matrix representation is abstracted away. This is typical
+in many image processing libraries where the operations are optimized for performance and memory usage. In cases where
+you need to solve linear systems involving these operators, please use the SciPy implementations `LinearOperator` (
+see [here](https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.linalg.LinearOperator.html)) and `cg` (
+see [here](https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.linalg.cg.html)).
